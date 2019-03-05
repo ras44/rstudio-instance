@@ -14,11 +14,10 @@ sudo yum install -y yum-utils
 sudo yum-builddep R
 sudo yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel
 
-# Required by R keyring package
-sudo yum install -y libsecret-devel libsodium-devel
-
-# Required by RMarkdown knit to pdf
-sudo yum install -y texlive-titling
+sudo yum install -y libsecret-devel libsodium-devel openssl-devel # Required by R keyring package
+sudo yum install -y texlive-titling # Required by RMarkdown knit to pdf
+sudo yum install -y libxml2-devel # Required by xml2
+sudo yum install -y unixODBC-devel # Required by odbc
 
 # Download R
 wget https://cran.r-project.org/src/base/R-${R_MAJOR_VERSION}/R-${R_VERSION}.tar.gz
