@@ -28,6 +28,9 @@ make
 sudo make install
 cd ..
 
+# Install packrat at the system level
+echo 'install.packages("packrat", repos = "http://cran.us.r-project.org")' | sudo R --vanilla
+
 # Download RStudio Server
 wget https://download2.rstudio.org/rstudio-server-rhel-$RSTUDIO_VERSION-x86_64.rpm
 # Install RStudio Server
