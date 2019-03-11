@@ -27,6 +27,9 @@ make
 sudo make install
 cd ..
 
+# Install packrat at the system level
+echo 'install.packages("packrat", repos = "http://cran.us.r-project.org")' | sudo R --vanilla
+
 # Download RStudio Server
 sudo apt-get -y install gdebi-core
 wget https://download2.rstudio.org/rstudio-server-stretch-$RSTUDIO_VERSION-amd64.deb
