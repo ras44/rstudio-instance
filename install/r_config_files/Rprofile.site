@@ -1,0 +1,30 @@
+local({
+
+  ##############################################################################
+  # By default httr, which is used by bigrquery for oauth, will look in the R
+  # session's current working directory for .httr-oauth. Change the location to
+  # the user's home directory so that authentication only needs to be performed
+  # once rather than for every new project.
+  ##############################################################################
+
+  options("httr_oauth_cache" = "~/.httr-oauth")
+
+  ##############################################################################
+  # httr tries to redirect to localhost which doesn't work when running R on a
+  # remote server. Instead, force httr  to do an out-of-band oauth flow which
+  # will prompt the user to open a URL in their browser and then enter a code in
+  # the R console.
+  ##############################################################################
+
+  options(httr_oob_default = TRUE)
+
+
+  ##############################################################################
+  # packrat attempts to knit all RMarkdown files by default in order to discover
+  # dependencies, this results in long load times and system hangs.  We avoid
+  # with the below option.
+  # see: https://github.com/rstudio/packrat/issues/458
+  ##############################################################################
+
+  options(packrat.dependency.discovery.disabled = TRUE)
+})
