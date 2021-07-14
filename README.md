@@ -1,10 +1,9 @@
 # Quickstart
 
-### Run install script as root on a clean CentOS 7 instance:
+### Run install script as root on a clean Ubuntu Focal 20.04 LTS instance:
 ```
-yum -y install git
 git clone git@github.com:ras44/rstudio-instance.git
 cd rstudio-instance
-git checkout linux-centos7
+git checkout linux-ubuntu-focal-20.04
 ./install.sh
 ```
