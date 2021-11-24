@@ -29,7 +29,7 @@ echo ""
 
 cat ~/.ssh/id_rsa.pub
 echo ""
-echo "Copy and add the above SSH public key (starting with \"ssh-rsa\") to GitHub's allowed SSH keys at https://gh.internal.shutterfly.com/settings/keys and press the RETURN key once that is complete." 
+echo "Copy and add the above SSH public key (starting with \"ssh-rsa\") to GitHub's allowed SSH keys and press the RETURN key once that is complete." 
 read
 
 echo ""
