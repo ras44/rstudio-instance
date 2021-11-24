@@ -113,8 +113,8 @@ confirm() {
   curl -O https://cdn.rstudio.com/r/ubuntu-2004/pkgs/r-${R_VERSION}_1_amd64.deb
   gdebi -n r-${R_VERSION}_1_amd64.deb
 
-  # ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
-  # ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
+  ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
+  ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
 
   # workaround for #100, R reticulate package references non-existent lib
   # ln -sf /usr/lib64/libpython2.7.so.1.0 /usr/lib64/libpython2.7.so
